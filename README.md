@@ -1,6 +1,6 @@
 <!-- Please update value in the {}  -->
 
-<h1 align="center">{Your project name}</h1>
+<h1 align="center">Todo App</h1>
 
 <div align="center">
    Solution for a challenge from  <a href="http://devchallenges.io" target="_blank">Devchallenges.io</a>.
@@ -8,11 +8,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://{your-demo-link.your-domain}">
+    <a href="https://https://todo-kv.netlify.app/">
       Demo
     </a>
     <span> | </span>
-    <a href="https://{your-url-to-the-solution}">
+    <a href="https://devchallenges.io/solutions/nlqdrRc8Y5ZnVEou4xiN">
       Solution
     </a>
     <span> | </span>
@@ -37,56 +37,85 @@
 
 ## Overview
 
-![screenshot](https://user-images.githubusercontent.com/16707738/92399059-5716eb00-f132-11ea-8b14-bcacdc8ec97b.png)
+![screenshot](screenshots/screenshot-desktop.png)
+![gif](screenshots/todo.gif)
 
-Introduce your projects by taking a screenshot or a gif. Try to tell visitors a story about your project by answering:
+Todo App. Maintain your tasks easily. Remembers everything. Switch between active, completed and all tasks.
 
 - Where can I see your demo?
+  ![Live Demo](https://todo-kv.netlify.app/)
+
 - What was your experience?
+  It was amazing it's my first React app.
+
 - What have you learned/improved?
-- Your wisdom? :)
+
+  I've learned lot of stuff in this challenge:
+
+  - How to use Sass with React
+
+  - How to use CSS Modules to style React components
+
+  - How to work with hooks like useState and useEffect
+
+  - How to save data in browser's local storage
+
+  ```js
+  const loadTasks = () => {
+  	const data = JSON.parse(localStorage['taskList']);
+  	if (data.length) setTaskList(data);
+  };
+
+  const saveTasks = () => {
+  	localStorage.setItem('taskList', JSON.stringify(taskList));
+  };
+
+  // Load tasks from local storage when app is launched
+  useEffect(loadTasks, []);
+  // Save tasks in local storage if tasks get changed (also run when it loads)
+  useEffect(saveTasks, [taskList]);
+  ```
 
 ### Built With
 
-<!-- This section should list any major frameworks that you built your project using. Here are a few examples.-->
-
 - [React](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
-- [Tailwind](https://tailwindcss.com/)
+- [React](https://sass-lang.com/)
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+- User can add a new task
+- User can complete a task
+- User can toggle between All, Active and Completed
+- User can remove one or all tasks under the Completed tab
+- User can delete completed tasks
+- User can delete all the completed tasks at once
+- App stores the data in local storage that when user refresh the page user can still see my progress
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
 
 ## How To Use
 
-<!-- Example: -->
-
-To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+To clone and run this application, you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [yarn](https://yarnpkg.com/)) installed on your computer. From your command line:
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/your-user-name/your-project-name
+$ git clone https://github.com/vatsalsinghkv/todo-app-master
 
 # Install dependencies
-$ npm install
+$ yarn install
 
 # Run the app
-$ npm start
+$ yarn start
 ```
 
 ## Acknowledgements
 
-<!-- This section should list any articles or add-ons/plugins that helps you to complete the project. This is optional but it will help you in the future. For example: -->
-
-- [Steps to replicate a design with only HTML and CSS](https://devchallenges-blogs.web.app/how-to-replicate-design/)
-- [Node.js](https://nodejs.org/)
-- [Marked - a markdown parser](https://github.com/chjj/marked)
+- [Illustrations by Storyset](https://storyset.com/)
 
 ## Contact
 
-- Website [your-website.com](https://{your-web-site-link})
-- GitHub [@your-username](https://{github.com/your-usermame})
-- Twitter [@your-twitter](https://{twitter.com/your-username})
+- Github - [@vatsalsinghkv](https://github.com/vatsalsinghkv)
+- Twitter - [@vatsalsinghkv](https://www.twitter.com/vatsalsinghkv)
+- Instagram - [@vatsal.sing.hkv](https://www.instagram.com/vatsal.singh.kv)
+- Facebook - [@vatsalsinghkv](https://www.facebook.com/vatsal.singh.kv)
+- Frontend Mentor - [@vatsalsinghkv](https://www.frontendmentor.io/profile/vatsalsinghkv)
