@@ -4,7 +4,7 @@ const Error = ({ text, img }) => {
 	return (
 		<div className={styles.error}>
 			<p className={styles.error__text}>{text}</p>
-			<img className={styles.error__img} src={img} alt="No Task Illustrator" />
+			<img className={styles.error__img} src={img} alt="Illustration" />
 
 			<a
 				target="_blank"
