@@ -7,7 +7,6 @@ function App() {
 	return (
 		<div className={styles.App}>
 			<Title>#todo</Title>
-
 			<Main />
 			<Footer name="Vatsal Singh" github="https://github.com/vatsalsinghkv" />
 		</div>

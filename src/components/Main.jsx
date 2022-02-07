@@ -14,8 +14,8 @@ const Main = () => {
 	const [showModal, setShowModal] = useState(false);
 
 	const loadTasks = () => {
-		const data = JSON.parse(localStorage['taskList']);
-		if (data.length) setTaskList(data);
+		const data = JSON.parse(localStorage.getItem('taskList'));
+		if (data?.length) setTaskList(data);
 	};
 
 	const saveTasks = () => {
